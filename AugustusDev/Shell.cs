@@ -21,13 +21,33 @@ namespace AugustusDev
             {
                 status = Cycle();
             }
+
+            switch (status)
+            {
+                case 1:
+                    Console.WriteLine("Shell exited at user request.");
+                    Console.ReadLine();
+                    break;
+                default:
+                    Console.WriteLine("Uncaught exit status code.");
+                    Console.ReadLine();
+                    break;
+            }
         }
 
         int Cycle()
         {
-            Console.WriteLine("$");
-            Console.ReadLine();
-            return 0;
+            Console.Write("$");
+            string input = Console.ReadLine();
+
+            if (input != "exit")
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
         }
 
     }
