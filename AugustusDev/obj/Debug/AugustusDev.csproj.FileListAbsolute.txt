@@ -1,0 +1,6 @@
+G:\git\AugustusDev\AugustusDev\bin\Debug\AugustusDev.exe.config
+G:\git\AugustusDev\AugustusDev\bin\Debug\AugustusDev.exe
+G:\git\AugustusDev\AugustusDev\bin\Debug\AugustusDev.pdb
+G:\git\AugustusDev\AugustusDev\obj\Debug\AugustusDev.csprojResolveAssemblyReference.cache
+G:\git\AugustusDev\AugustusDev\obj\Debug\AugustusDev.exe
+G:\git\AugustusDev\AugustusDev\obj\Debug\AugustusDev.pdb
