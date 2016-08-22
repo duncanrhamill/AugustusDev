@@ -8,9 +8,11 @@ namespace AugustusDev
 {
     public class Shell
     {
+        public UserManager UserManagmentService;
+
         public Shell()
         {
-
+            UserManagmentService = new UserManager();
         }
 
         public void BeginLoop()
