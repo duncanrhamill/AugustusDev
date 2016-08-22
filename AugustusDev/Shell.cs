@@ -9,10 +9,27 @@ namespace AugustusDev
     public class Shell
     {
         public UserManager UserManagmentService;
+        public User CurrentUser;
 
-        public Shell()
+        public Shell(bool requireLogin = false)
         {
             UserManagmentService = new UserManager();
+            
+            if (requireLogin)
+            {
+                User attempt = UserManagmentService.LoginUser();
+                
+                if (attempt.Username != "::INVALID::")
+                {
+                    CurrentUser = attempt;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid user. Will login as guest.");
+                    CurrentUser = UserManagmentService.GuestUser();
+                }
+            }
+
         }
 
         public void BeginLoop()
@@ -39,7 +56,7 @@ namespace AugustusDev
 
         int Cycle()
         {
-            Console.Write("$");
+            Console.Write("{0}$ ", CurrentUser.Username);
             string input = Console.ReadLine();
 
             if (input != "exit")

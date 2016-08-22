@@ -24,7 +24,7 @@ namespace AugustusDev
 
         public void Run()
         {
-            Shell shell = new Shell();
+            Shell shell = new Shell(true);
             shell.BeginLoop();
         }
     }
